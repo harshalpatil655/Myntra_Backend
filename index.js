@@ -14,8 +14,8 @@ app.use(express.json());
 
 app.use("/", UserRoute);
 app.use("/data", MensdataRoute);
-app.use(Authetication);
-app.use("/cart", CartRoute);
+
+app.use("/cart", Authetication, CartRoute);
 
 app.listen(PORT, async () => {
   try {
